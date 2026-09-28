@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OdontoArt - Procedimentos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="procedimentos.css">
+</head>
+<body>
+
+  <!-- Header / Navbar -->
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <span class="logo-icon">✨</span> OdontoArt
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="procedimentos.html" class="nav-link active">Procedimentos</a></li>
+          <li><a href="depoimentos.html" class="nav-link">Depoimentos</a></li>
+          <li><a href="agendas.html" class="nav-link">Agenda</a></li>
+          <li><a href="contato.html" class="nav-link">Contato</a></li>
+        </ul>
+      </nav>
+      <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20OdontoArt." target="_blank" class="btn-header">Agendar Consulta</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero da Página de Procedimentos -->
+    <section class="page-hero">
+      <span class="badge">Especialidades & Tecnologias</span>
+      <h1>Tecnologia de ponta para o seu sorriso</h1>
+      <p>Explore nossos tratamentos de alta performance desenvolvidos com rigor científico, materiais de primeira linha e foco total no seu conforto.</p>
+    </section>
+
+    <!-- Seção de Procedimentos com Sistema de Abas (Filtro Interativo) -->
+    <section class="section-padding">
+      
+      <!-- Filtros por Categoria -->
+      <div class="proc-filters">
+        <button class="filter-btn active" onclick="filterProc('all', this)">Todos</button>
+        <button class="filter-btn" onclick="filterProc('estetica', this)">Estética & Clareamento</button>
+        <button class="filter-btn" onclick="filterProc('cirurgia', this)">Cirurgia & Implantes</button>
+        <button class="filter-btn" onclick="filterProc('ortodontia', this)">Ortodontia</button>
+        <button class="filter-btn" onclick="filterProc('prevencao', this)">Prevenção</button>
+      </div>
+
+      <!-- Grid Dinâmico de Procedimentos -->
+      <div class="procedures-detailed-grid">
+        
+        <!-- Item 1: Estética -->
+        <div class="proc-detail-card" data-category="estetica">
+          <div class="proc-card-top">
+            <div class="proc-detail-icon">🦷</div>
+            <span class="proc-tag">Estética & Sorriso</span>
+          </div>
+          <div class="proc-detail-content">
+            <h3>Lentes de Contato Dental</h3>
+            <p>Lâminas ultrafinas em cerâmica pura aplicadas sobre os dentes para corrigir cor, formato, pequenas assimetrias e desgaste com mínimo desgaste dental.</p>
+            <ul class="proc-features">
+              <li>✔️ Duração superior a 15 anos</li>
+              <li>✔️ Alta resistência a manchas e pigmentos</li>
+              <li>✔️ Planejamento 100% digital e prévia real</li>
+            </ul>
+          </div>
+          <div class="proc-card-footer">
+            <span class="proc-time">⏱️ 2 a 3 sessões</span>
+            <a href="index.html#agendamento" class="proc-link-btn">Agendar Avaliação →</a>
+          </div>
+        </div>
+
+        <!-- Item 2: Estética -->
+        <div class="proc-detail-card" data-category="estetica">
+          <div class="proc-card-top">
+            <div class="proc-detail-icon">⚡</div>
+            <span class="proc-tag">Estética Rápida</span>
+          </div>
+          <div class="proc-detail-content">
+            <h3>Clareamento a Laser Avançado</h3>
+            <p>Protocolo moderno que une géis de alta performance e tecnologia de luz fria (laser), removendo pigmentações profundas controlando a sensibilidade.</p>
+            <ul class="proc-features">
+              <li>✔️ Resultados expressivos na 1ª sessão</li>
+              <li>✔️ Tecnologia dessensibilizante inclusa</li>
+              <li>✔️ Acompanhamento com moldeiras caseiras</li>
+            </ul>
+          </div>
+          <div class="proc-card-footer">
+            <span class="proc-time">⏱️ 1 sessão de 1h</span>
+            <a href="index.html#agendamento" class="proc-link-btn">Agendar Avaliação →</a>
+          </div>
+        </div>
+
+        <!-- Item 3: Cirurgia -->
+        <div class="proc-detail-card" data-category="cirurgia">
+          <div class="proc-card-top">
+            <div class="proc-detail-icon">🔬</div>
+            <span class="proc-tag">Cirurgia Sem Cortes</span>
+          </div>
+          <div class="proc-detail-content">
+            <h3>Implantes Dentários Guiados</h3>
+            <p>Substituição de dentes perdidos através de implantes de titânio integrados por computador, eliminando cortes tradicionais e garantindo pós-operatório tranquilo.</p>
+            <ul class="proc-features">
+              <li>✔️ Cirurgia guiada por prototipagem 3D</li>
+              <li>✔️ Recuperação e cicatrização aceleradas</li>
+              <li>✔️ Osteointegração biocompatível</li>
+            </ul>
+          </div>
+          <div class="proc-card-footer">
+            <span class="proc-time">⏱️ Procedimento cirúrgico seguro</span>
+            <a href="index.html#agendamento" class="proc-link-btn">Agendar Avaliação →</a>
+          </div>
+        </div>
+
+        <!-- Item 4: Ortodontia -->
+        <div class="proc-detail-card" data-category="ortodontia">
+          <div class="proc-card-top">
+            <div class="proc-detail-icon">✨</div>
+            <span class="proc-tag">Ortodontia Estética</span>
+          </div>
+          <div class="proc-detail-content">
+            <h3>Alinhadores Ortodônticos Invisíveis</h3>
+            <p>A evolução do aparelho fixo. Placas transparentes removíveis que movimentam os dentes de forma gradual, confortável e totalmente imperceptível.</p>
+            <ul class="proc-features">
+              <li>✔️ Removível para comer e higienizar</li>
+              <li>✔️ Sem bráquetes ou fios machucando</li>
+              <li>✔️ Previsibilidade digital completa</li>
+            </ul>
+          </div>
+          <div class="proc-card-footer">
+            <span class="proc-time">⏱️ Tratamento personalizado</span>
+            <a href="index.html#agendamento" class="proc-link-btn">Agendar Avaliação →</a>
+          </div>
+        </div>
+
+        <!-- Item 5: Estética / Orofacial -->
+        <div class="proc-detail-card" data-category="estetica">
+          <div class="proc-card-top">
+            <div class="proc-detail-icon">💎</div>
+            <span class="proc-tag">Estética Orofacial</span>
+          </div>
+          <div class="proc-detail-content">
+            <h3>Harmonização Facial Integrada</h3>
+            <p>Procedimentos minimamente invasivos (como preenchimento labial e toxina botulínica) para equilibrar as proporções do rosto e emoldurar o novo sorriso.</p>
+            <ul class="proc-features">
+              <li>✔️ Simetria e naturalidade garantidas</li>
+              <li>✔️ Produtos seguros e absorvíveis</li>
+              <li>✔️ Executado por especialistas credenciados</li>
+            </ul>
+          </div>
+          <div class="proc-card-footer">
+            <span class="proc-time">⏱️ Sessão rápida</span>
+            <a href="index.html#agendamento" class="proc-link-btn">Agendar Avaliação →</a>
+          </div>
+        </div>
+
+        <!-- Item 6: Prevenção -->
+        <div class="proc-detail-card" data-category="prevencao">
+          <div class="proc-card-top">
+            <div class="proc-detail-icon">🧼</div>
+            <span class="proc-tag">Saúde Preventiva</span>
+          </div>
+          <div class="proc-detail-content">
+            <h3>Profilaxia & Limpeza Ultrassônica</h3>
+            <p>Limpeza profunda avançada utilizando ponteiras de ultrassom e jato de bicarbonato para remoção completa de placa bacteriana, tártaro e prevenção gengival.</p>
+            <ul class="proc-features">
+              <li>✔️ Remoção indolor de manchas e tártaro</li>
+              <li>✔️ Polimento com pastas remineralizantes</li>
+              <li>✔️ Prevenção contra cáries e gengivite</li>
+            </ul>
+          </div>
+          <div class="proc-card-footer">
+            <span class="proc-time">⏱️ 45 minutos</span>
+            <a href="index.html#agendamento" class="proc-link-btn">Agendar Avaliação →</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Call to Action Final -->
+    <section class="section-padding section-alt">
+      <div class="cta-banner">
+        <h2>Pronto para transformar o seu sorriso?</h2>
+        <p>Agende sua avaliação e realize seu escaneamento 3D para descobrir o planejamento perfeito para o seu caso.</p>
+        <a href="index.html#agendamento" class="btn-primary">Agendar Avaliação Agora</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-col brand-col">
+        <div class="logo">✨ OdontoArt</div>
+        <p>Odontologia estética e integrativa. Transformando sorrisos com tecnologia e precisão.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="procedimentos.html">Procedimentos</a></li>
+          <li><a href="depoimentos.html">Depoimentos</a></li>
+          <li><a href="agendas.html">Agenda</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contato & Localização</h4>
+        <ul class="contact-footer-list">
+          <li><strong>Endereço:</strong> Av. Paulista, 1000 - Sala 42, SP</li>
+          <li><strong>WhatsApp:</strong> (11) 99999-9999</li>
+          <li><strong>E-mail:</strong> contato@odontoart.com.br</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 OdontoArt. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/" class="whatsapp-btn" target="_blank" aria-label="WhatsApp">💬</a>
+
+  <!-- Script Simples para Filtrar as Categorias -->
+  <script>
+    function filterProc(category, btn) {
+      // Remove a classe active de todos os botões
+      const buttons = document.querySelectorAll('.filter-btn');
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      // Mostra ou oculta os cards com base no atributo data-category
+      const cards = document.querySelectorAll('.proc-detail-card');
+      cards.forEach(card => {
+        if (category === 'all' || card.getAttribute('data-category') === category) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

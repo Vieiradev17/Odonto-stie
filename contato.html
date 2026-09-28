@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OdontoArt - Contato & Localização</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="contato.css">
+</head>
+<body>
+
+  <!-- Header / Navbar -->
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <span class="logo-icon">✨</span> OdontoArt
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="procedimentos.html" class="nav-link">Procedimentos</a></li>
+          <li><a href="depoimentos.html" class="nav-link">Depoimentos</a></li>
+          <li><a href="agenda.html" class="nav-link">Agenda</a></li>
+          <li><a href="contato.html" class="nav-link active">Contato</a></li>
+        </ul>
+      </nav>
+      <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20OdontoArt." target="_blank" class="btn-header">Agendar Consulta</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero da Página de Contato -->
+    <section class="page-hero">
+      <span class="badge">Fale Conosco</span>
+      <h1>Estamos prontos para atender você</h1>
+      <p>Entre em contato para tirar dúvidas, remarcar horários ou conhecer nossa clínica. Nossa equipe responderá o mais breve possível.</p>
+    </section>
+
+    <!-- Seção de Canais de Contato e Formulário -->
+    <section class="section-padding contact-main-section">
+      <div class="contact-grid">
+        
+        <!-- Coluna de Informações e Cards de Contato -->
+        <div class="contact-info-col">
+          <div class="contact-card-item">
+            <span class="contact-card-icon">📍</span>
+            <div>
+              <h3>Endereço</h3>
+              <p>Av. Paulista, 1000 - Sala 42<br>Bela Vista, São Paulo - SP</p>
+            </div>
+          </div>
+
+          <div class="contact-card-item">
+            <span class="contact-card-icon">💬</span>
+            <div>
+              <h3>WhatsApp Comercial</h3>
+              <p>(11) 99999-9999<br>Atendimento de Segunda a Sábado</p>
+            </div>
+          </div>
+
+          <div class="contact-card-item">
+            <span class="contact-card-icon">✉️</span>
+            <div>
+              <h3>E-mail</h3>
+              <p>contato@odontoart.com.br<br>suporte@odontoart.com.br</p>
+            </div>
+          </div>
+
+          <div class="contact-card-item">
+            <div>
+              <h3>Horário de Funcionamento</h3>
+              <p class="hours-text">
+                <span>Segunda a Sexta:</span> 08:00 - 19:00<br>
+                <span>Sábado:</span> 08:00 - 14:00<br>
+                <span>Domingo:</span> Fechado
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coluna do Formulário de Contato -->
+        <div class="contact-form-wrapper">
+          <form id="contactForm" class="contact-form-card" onsubmit="submitContact(event)">
+            <h3>Envie sua Mensagem</h3>
+            <p class="form-sub-desc">Preencha os campos abaixo e entraremos em contato rapidamente.</p>
+
+            <div class="form-group">
+              <label for="contactName">Seu Nome Completo</label>
+              <input type="text" id="contactName" required placeholder="Ex: Beatriz Lima">
+            </div>
+
+            <div class="form-group">
+              <label for="contactEmail">E-mail</label>
+              <input type="email" id="contactEmail" required placeholder="seu@email.com">
+            </div>
+
+            <div class="form-group">
+              <label for="contactPhone">WhatsApp / Telefone</label>
+              <input type="tel" id="contactPhone" required placeholder="(11) 98888-8888">
+            </div>
+
+            <div class="form-group">
+              <label for="contactSubject">Assunto</label>
+              <select id="contactSubject" required>
+                <option value="">Selecione o assunto...</option>
+                <option value="Dúvida sobre Procedimento">Dúvida sobre Procedimento</option>
+                <option value="Agendamento / Consulta">Agendamento / Consulta</option>
+                <option value="Orçamento">Orçamento</option>
+                <option value="Outros Assuntos">Outros Assuntos</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="contactMessage">Mensagem</label>
+              <textarea id="contactMessage" rows="4" required placeholder="Escreva sua mensagem aqui..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary" style="width: 100%;">Enviar Mensagem 🚀</button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Seção de Localização / Mapa Simulado -->
+    <section class="section-padding section-alt map-section">
+      <div class="map-container">
+        <h2>Como Chegar</h2>
+        <p>Localização privilegiada na principal via de São Paulo, com fácil acesso por metrô e estacionamento conveniado no local.</p>
+        <div class="map-box-fake">
+          <span class="map-pin">📍</span>
+          <strong>OdontoArt - Av. Paulista, 1000</strong>
+          <span>Próximo à Estação Trianon-Masp</span>
+          <a href="https://maps.google.com" target="_blank" class="btn-secondary" style="margin-top: 15px;">Abrir no Google Maps</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-col brand-col">
+        <div class="logo">✨ OdontoArt</div>
+        <p>Odontologia estética e integrativa. Transformando sorrisos com tecnologia e precisão.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="procedimentos.html">Procedimentos</a></li>
+          <li><a href="depoimentos.html">Depoimentos</a></li>
+          <li><a href="agenda.html">Agenda</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contato & Localização</h4>
+        <ul class="contact-footer-list">
+          <li><strong>Endereço:</strong> Av. Paulista, 1000 - Sala 42, SP</li>
+          <li><strong>WhatsApp:</strong> (11) 99999-9999</li>
+          <li><strong>E-mail:</strong> contato@odontoart.com.br</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 OdontoArt. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/" class="whatsapp-btn" target="_blank" aria-label="WhatsApp">💬</a>
+
+  <!-- Script de Envio de Contato -->
+  <script>
+    function submitContact(event) {
+      event.preventDefault();
+      const name = document.getElementById('contactName').value;
+      alert(`Obrigado pela mensagem, ${name}! Sua solicitação foi enviada com sucesso. Nossa equipe entrará em contato em breve.`);
+      document.getElementById('contactForm').reset();
+    }
+  </script>
+</body>
+</html>

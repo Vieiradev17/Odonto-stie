@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OdontoArt - Depoimentos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="depoimentos.css">
+</head>
+<body>
+
+  <!-- Header / Navbar -->
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <span class="logo-icon">✨</span> OdontoArt
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="procedimentos.html" class="nav-link">Procedimentos</a></li>
+          <li><a href="depoimentos.html" class="nav-link active">Depoimentos</a></li>
+          <li><a href="agendas.html" class="nav-link">Agenda</a></li>
+          <li><a href="contato.html" class="nav-link">Contato</a></li>
+        </ul>
+      </nav>
+      <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20OdontoArt." target="_blank" class="btn-header">Agendar Consulta</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero da Página de Depoimentos -->
+    <section class="page-hero">
+      <span class="badge">Histórias Reais</span>
+      <h1>O que nossos pacientes dizem</h1>
+      <p>Conheça relatos autênticos de quem transformou a autoestima, recuperou a confiança e experimentou uma nova era na odontologia.</p>
+    </section>
+
+    <!-- Estatísticas de Satisfação -->
+    <section class="section-padding stats-section">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <h2>4.9 / 5.0</h2>
+          <p>Avaliação Média no Google</p>
+          <span class="stars">⭐⭐⭐⭐⭐</span>
+        </div>
+        <div class="stat-card">
+          <h2>+2.500</h2>
+          <p>Sorrisos Transformados</p>
+          <span class="stat-sub">Pacientes satisfeitos</span>
+        </div>
+        <div class="stat-card">
+          <h2>98%</h2>
+          <p>Índice de Recomendação</p>
+          <span class="stat-sub">Pesquisa interna de satisfação</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção de Ação para Avaliar -->
+    <section class="section-padding review-action-section">
+      <div class="review-action-banner">
+        <h2>Já é paciente da OdontoArt?</h2>
+        <p>Sua opinião é fundamental para continuarmos transformando sorrisos com excelência. Escolha onde deseja deixar sua avaliação:</p>
+        <div class="review-buttons-group">
+          <!-- Botão para Avaliar no Google -->
+          <a href="https://maps.google.com" target="_blank" class="btn-review google-btn">
+            <span class="review-icon">🌐</span> Avaliar no Google
+          </a>
+          <!-- Botão para Avaliar no Site (Abre Modal) -->
+          <button onclick="openModal()" class="btn-review site-btn">
+            <span class="review-icon">⭐</span> Deixar Depoimento no Site
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mural de Depoimentos -->
+    <section class="section-padding">
+      <div class="testimonials-masonry-grid" id="testimonialsGrid">
+        
+        <!-- Depoimento 1 -->
+        <div class="testimonial-box">
+          <div class="testimonial-header">
+            <div class="client-avatar">BM</div>
+            <div class="client-info">
+              <strong>Beatriz Mendes</strong>
+              <span>Lentes de Contato Dental</span>
+            </div>
+          </div>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p>"A experiência foi incrível do início ao fim. As lentes ficaram absurdamente naturais, ninguém diz que fiz procedimento. A equipe é super atenciosa e o consultório parece um spa!"</p>
+          <span class="review-date">Há 2 semanas no Google</span>
+        </div>
+
+        <!-- Depoimento 2 -->
+        <div class="testimonial-box highlight-box">
+          <div class="testimonial-header">
+            <div class="client-avatar">RF</div>
+            <div class="client-info">
+              <strong>Ricardo Fonseca</strong>
+              <span>Implantes Digitais Guiados</span>
+            </div>
+          </div>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p>"Sempre tive pavor de cirurgia de implante, mas o método guiado deles é surreal. Sem cortes tradicionais, zero dor no pós-operatório e recuperação extremamente rápida. Nota 10!"</p>
+          <span class="review-date">Há 1 mês no Google</span>
+        </div>
+
+        <!-- Depoimento 3 -->
+        <div class="testimonial-box">
+          <div class="testimonial-header">
+            <div class="client-avatar">FC</div>
+            <div class="client-info">
+              <strong>Fernanda Costa</strong>
+              <span>Alinhadores Invisíveis</span>
+            </div>
+          </div>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p>"Troquei o aparelho fixo pelos alinhadores invisíveis e foi a melhor escolha do meu ano. Prático para comer, higienizar e o melhor: ninguém percebia que eu estava usando."</p>
+          <span class="review-date">Há 1 mês no Google</span>
+        </div>
+
+        <!-- Depoimento 4 -->
+        <div class="testimonial-box">
+          <div class="testimonial-header">
+            <div class="client-avatar">CA</div>
+            <div class="client-info">
+              <strong>Carlos Eduardo Almeida</strong>
+              <span>Clareamento a Laser</span>
+            </div>
+          </div>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p>"Fiz o clareamento a laser para uma viagem e o resultado superou todas as expectativas. O protocolo com laser evitou qualquer sensibilidade incômoda. Recomendo de olhos fechados."</p>
+          <span class="review-date">Há 2 meses no Google</span>
+        </div>
+
+        <!-- Depoimento 5 -->
+        <div class="testimonial-box">
+          <div class="testimonial-header">
+            <div class="client-avatar">JS</div>
+            <div class="client-info">
+              <strong>Juliana Sampaio</strong>
+              <span>Harmonização Facial</span>
+            </div>
+          </div>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p>"O cuidado com a simetria facial e os detalhes é impressionante. Fiz preenchimento labial e botox preventivo, ficou extremamente natural e elegante. Profissionais de excelência!"</p>
+          <span class="review-date">Há 3 meses no Google</span>
+        </div>
+
+        <!-- Depoimento 6 -->
+        <div class="testimonial-box">
+          <div class="testimonial-header">
+            <div class="client-avatar">MP</div>
+            <div class="client-info">
+              <strong>Marcos Paulo Ribeiro</strong>
+              <span>Limpeza & Profilaxia</span>
+            </div>
+          </div>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p>"Atendimento impecável desde a recepção até a cadeira. A limpeza com ultrassom é super confortável e explicam cada detalhe do cuidado preventivo. Virei cliente fiel."</p>
+          <span class="review-date">Há 3 meses no Google</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Call to Action Final -->
+    <section class="section-padding section-alt">
+      <div class="cta-banner">
+        <h2>Faça parte da nossa história de sorrisos</h2>
+        <p>Agende sua avaliação e descubra como podemos elevar a sua autoestima com total conforto e segurança.</p>
+        <a href="index.html#agendamento" class="btn-primary">Agendar Minha Avaliação</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal para Enviar Depoimento no Site -->
+  <div class="modal-overlay" id="reviewModal">
+    <div class="modal-card">
+      <div class="modal-header-top">
+        <h3>Deixe seu Depoimento</h3>
+        <button onclick="closeModal()" class="modal-close-btn">&times;</button>
+      </div>
+      <form id="reviewForm" onsubmit="submitReview(event)">
+        <div class="form-group">
+          <label for="clientName">Seu Nome Completo</label>
+          <input type="text" id="clientName" required placeholder="Ex: Ana Souza">
+        </div>
+        <div class="form-group">
+          <label for="clientProc">Procedimento Realizado</label>
+          <input type="text" id="clientProc" required placeholder="Ex: Clareamento a Laser">
+        </div>
+        <div class="form-group">
+          <label for="clientComment">Seu Relato</label>
+          <textarea id="clientComment" rows="4" required placeholder="Conte como foi sua experiência..."></textarea>
+        </div>
+        <button type="submit" class="btn-primary" style="width: 100%;">Enviar Depoimento</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-col brand-col">
+        <div class="logo">✨ OdontoArt</div>
+        <p>Odontologia estética e integrativa. Transformando sorrisos com tecnologia e precisão.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="procedimentos.html">Procedimentos</a></li>
+          <li><a href="depoimentos.html">Depoimentos</a></li>
+          <li><a href="agendas.html">Agenda</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contato & Localização</h4>
+        <ul class="contact-footer-list">
+          <li><strong>Endereço:</strong> Av. Paulista, 1000 - Sala 42, SP</li>
+          <li><strong>WhatsApp:</strong> (11) 99999-9999</li>
+          <li><strong>E-mail:</strong> contato@odontoart.com.br</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 OdontoArt. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/" class="whatsapp-btn" target="_blank" aria-label="WhatsApp">💬</a>
+
+  <!-- Script para gerenciar o Modal e Adicionar o Depoimento Dinamicamente -->
+  <script>
+    function openModal() {
+      document.getElementById('reviewModal').classList.add('active');
+    }
+
+    function closeModal() {
+      document.getElementById('reviewModal').classList.remove('active');
+    }
+
+    function submitReview(event) {
+      event.preventDefault();
+
+      const name = document.getElementById('clientName').value;
+      const proc = document.getElementById('clientProc').value;
+      const comment = document.getElementById('clientComment').value;
+
+      // Pega as iniciais do nome para o avatar
+      const nameParts = name.trim().split(' ');
+      let initials = nameParts[0][0];
+      if (nameParts.length > 1) {
+        initials += nameParts[nameParts.length - 1][0];
+      }
+      initials = initials.toUpperCase();
+
+      // Cria o novo card de depoimento
+      const grid = document.getElementById('testimonialsGrid');
+      const newBox = document.createElement('div');
+      newBox.className = 'testimonial-box';
+      newBox.innerHTML = `
+        <div class="testimonial-header">
+          <div class="client-avatar">${initials}</div>
+          <div class="client-info">
+            <strong>${name}</strong>
+            <span>${proc}</span>
+          </div>
+        </div>
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p>"${comment}"</p>
+        <span class="review-date">Agora mesmo no Site</span>
+      `;
+
+      // Insere no topo do grid
+      grid.prepend(newBox);
+
+      // Fecha o modal e limpa o formulário
+      closeModal();
+      document.getElementById('reviewForm').reset();
+      alert('Obrigado! Seu depoimento foi publicado com sucesso.');
+    }
+  </script>
+</body>
+</html>

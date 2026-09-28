@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OdontoArt - Agenda & Agendamento</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="agendas.css">
+</head>
+<body>
+
+  <!-- Header / Navbar -->
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <span class="logo-icon">✨</span> OdontoArt
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="procedimentos.html" class="nav-link">Procedimentos</a></li>
+          <li><a href="depoimentos.html" class="nav-link">Depoimentos</a></li>
+          <li><a href="agendas.html" class="nav-link active">Agenda</a></li>
+          <li><a href="contato.html" class="nav-link">Contato</a></li>
+        </ul>
+      </nav>
+      <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20OdontoArt." target="_blank" class="btn-header">Agendar Consulta</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero da Página de Agenda -->
+    <section class="page-hero">
+      <span class="badge">Agendamento Online</span>
+      <h1>Marque sua consulta em poucos cliques</h1>
+      <p>Escolha o procedimento ideal, selecione o profissional de sua preferência e reserve seu horário com total praticidade.</p>
+    </section>
+
+    <!-- Sistema de Agendamento Interativo -->
+    <section class="section-padding">
+      <div class="booking-container">
+        
+        <!-- Indicador de Etapas -->
+        <div class="booking-steps-indicator">
+          <div class="step-indicator active" id="indicator-1">1. Procedimento</div>
+          <div class="step-indicator" id="indicator-2">2. Profissional</div>
+          <div class="step-indicator" id="indicator-3">3. Data & Horário</div>
+          <div class="step-indicator" id="indicator-4">4. Seus Dados</div>
+        </div>
+
+        <!-- Formulário / Wizard de Agendamento -->
+        <form id="bookingForm" class="booking-card" onsubmit="confirmBooking(event)">
+          
+          <!-- ETAPA 1: Procedimento -->
+          <div class="booking-step active" id="step-1">
+            <h3>Selecione o Tratamento Desejado</h3>
+            <p class="step-desc">Qual especialidade você gostaria de consultar ou realizar?</p>
+            
+            <div class="options-grid">
+              <label class="select-card">
+                <input type="radio" name="procedimento" value="Avaliação Geral / Escaneamento 3D" required>
+                <div class="card-body-opt">
+                  <span class="opt-icon">🔍</span>
+                  <strong>Avaliação Geral</strong>
+                  <span>Checkup completo e escaneamento 3D</span>
+                </div>
+              </label>
+
+              <label class="select-card">
+                <input type="radio" name="procedimento" value="Lentes de Contato Dental">
+                <div class="card-body-opt">
+                  <span class="opt-icon">🦷</span>
+                  <strong>Lentes de Contato</strong>
+                  <span>Estética e transformação do sorriso</span>
+                </div>
+              </label>
+
+              <label class="select-card">
+                <input type="radio" name="procedimento" value="Clareamento a Laser">
+                <div class="card-body-opt">
+                  <span class="opt-icon">⚡</span>
+                  <strong>Clareamento a Laser</strong>
+                  <span>Protocolo rápido e dessensibilizante</span>
+                </div>
+              </label>
+
+              <label class="select-card">
+                <input type="radio" name="procedimento" value="Implantes Dentários">
+                <div class="card-body-opt">
+                  <span class="opt-icon">🔬</span>
+                  <strong>Implantes Guiados</strong>
+                  <span>Cirurgia segura e sem cortes</span>
+                </div>
+              </label>
+
+              <label class="select-card">
+                <input type="radio" name="procedimento" value="Alinhadores Invisíveis">
+                <div class="card-body-opt">
+                  <span class="opt-icon">✨</span>
+                  <strong>Alinhadores Invisíveis</strong>
+                  <span>Ortodontia estética e removível</span>
+                </div>
+              </label>
+
+              <label class="select-card">
+                <input type="radio" name="procedimento" value="Limpeza / Profilaxia">
+                <div class="card-body-opt">
+                  <span class="opt-icon">🧼</span>
+                  <strong>Limpeza & Profilaxia</strong>
+                  <span>Saúde preventiva e polimento</span>
+                </div>
+              </label>
+            </div>
+
+            <div class="wizard-actions right">
+              <button type="button" class="btn-primary" onclick="nextStep(2)">Avançar →</button>
+            </div>
+          </div>
+
+          <!-- ETAPA 2: Profissional -->
+          <div class="booking-step" id="step-2">
+            <h3>Escolha o Profissional</h3>
+            <p class="step-desc">Selecione o especialista de sua preferência ou escolha o primeiro disponível.</p>
+            
+            <div class="options-grid">
+              <label class="select-card">
+                <input type="radio" name="profissional" value="Dr. Carlos Eduardo (CRO-SP 12345)" required>
+                <div class="card-body-opt">
+                  <span class="opt-icon">👨‍⚕️</span>
+                  <strong>Dr. Carlos Eduardo</strong>
+                  <span>Implantodontia & Cirurgia Avançada</span>
+                </div>
+              </label>
+
+              <label class="select-card">
+                <input type="radio" name="profissional" value="Dra. Mariana Souza (CRO-SP 54321)">
+                <div class="card-body-opt">
+                  <span class="opt-icon">👩‍⚕️</span>
+                  <strong>Dra. Mariana Souza</strong>
+                  <span>Estética Dental & Lentes</span>
+                </div>
+              </label>
+
+              <label class="select-card">
+                <input type="radio" name="profissional" value="Dr. Rafael Lima (CRO-SP 98765)">
+                <div class="card-body-opt">
+                  <span class="opt-icon">👨‍⚕️</span>
+                  <strong>Dr. Rafael Lima</strong>
+                  <span>Ortodontia & Alinhadores</span>
+                </div>
+              </label>
+
+              <label class="select-card">
+                <input type="radio" name="profissional" value="Primeiro Profissional Disponível">
+                <div class="card-body-opt">
+                  <span class="opt-icon">⭐</span>
+                  <strong>Qualquer Especialista</strong>
+                  <span>Atendimento mais ágil na agenda</span>
+                </div>
+              </label>
+            </div>
+
+            <div class="wizard-actions space-between">
+              <button type="button" class="btn-secondary" onclick="prevStep(1)">← Voltar</button>
+              <button type="button" class="btn-primary" onclick="nextStep(3)">Avançar →</button>
+            </div>
+          </div>
+
+          <!-- ETAPA 3: Data e Horário -->
+          <div class="booking-step" id="step-3">
+            <h3>Data e Horário da Consulta</h3>
+            <p class="step-desc">Selecione o dia e o período de sua preferência.</p>
+            
+            <div class="datetime-grid">
+              <div class="form-group">
+                <label for="bookingDate">Data Desejada</label>
+                <input type="date" id="bookingDate" name="data" required>
+              </div>
+
+              <div class="form-group">
+                <label for="bookingTime">Horário de Preferência</label>
+                <select id="bookingTime" name="horario" required>
+                  <option value="">Selecione um horário...</option>
+                  <option value="09:00 - Manhã">09:00 - Manhã</option>
+                  <option value="10:30 - Manhã">10:30 - Manhã</option>
+                  <option value="13:30 - Tarde">13:30 - Tarde</option>
+                  <option value="15:00 - Tarde">15:00 - Tarde</option>
+                  <option value="17:00 - Fim de Tarde">17:00 - Fim de Tarde</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="wizard-actions space-between">
+              <button type="button" class="btn-secondary" onclick="prevStep(2)">← Voltar</button>
+              <button type="button" class="btn-primary" onclick="nextStep(4)">Avançar →</button>
+            </div>
+          </div>
+
+          <!-- ETAPA 4: Dados do Paciente -->
+          <div class="booking-step" id="step-4">
+            <h3>Informações de Contato</h3>
+            <p class="step-desc">Preencha seus dados para confirmarmos o agendamento via WhatsApp.</p>
+            
+            <div class="user-info-grid">
+              <div class="form-group">
+                <label for="clientName">Nome Completo</label>
+                <input type="text" id="clientName" name="nome" required placeholder="Ex: Lucas Ferreira">
+              </div>
+
+              <div class="form-group">
+                <label for="clientPhone">WhatsApp / Telefone</label>
+                <input type="tel" id="clientPhone" name="telefone" required placeholder="Ex: (11) 98888-8888">
+              </div>
+
+              <div class="form-group full-width">
+                <label for="clientEmail">E-mail (Opcional)</label>
+                <input type="email" id="clientEmail" name="email" placeholder="seu@email.com">
+              </div>
+            </div>
+
+            <div class="wizard-actions space-between">
+              <button type="button" class="btn-secondary" onclick="prevStep(3)">← Voltar</button>
+              <button type="submit" class="btn-primary btn-success">Confirmar Agendamento 🚀</button>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </section>
+
+    <!-- Call to Action Suporte -->
+    <section class="section-padding section-alt">
+      <div class="cta-banner">
+        <h2>Dúvidas com algum horário?</h2>
+        <p>Nossa equipe de atendimento está pronta para ajudar você diretamente pelo WhatsApp.</p>
+        <a href="https://wa.me/" target="_blank" class="btn-primary">Falar com Atendimento</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-col brand-col">
+        <div class="logo">✨ OdontoArt</div>
+        <p>Odontologia estética e integrativa. Transformando sorrisos com tecnologia e precisão.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="procedimentos.html">Procedimentos</a></li>
+          <li><a href="depoimentos.html">Depoimentos</a></li>
+          <li><a href="agendas.html">Agenda</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contato & Localização</h4>
+        <ul class="contact-footer-list">
+          <li><strong>Endereço:</strong> Av. Paulista, 1000 - Sala 42, SP</li>
+          <li><strong>WhatsApp:</strong> (11) 99999-9999</li>
+          <li><strong>E-mail:</strong> contato@odontoart.com.br</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 OdontoArt. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/" class="whatsapp-btn" target="_blank" aria-label="WhatsApp">💬</a>
+
+  <!-- Script do Wizard de Agendamento -->
+  <script>
+    function nextStep(step) {
+      // Validação básica da etapa atual
+      if (step === 2) {
+        const procSelected = document.querySelector('input[name="procedimento"]:checked');
+        if (!procSelected) {
+          alert('Por favor, selecione um procedimento.');
+          return;
+        }
+      } else if (step === 3) {
+        const profSelected = document.querySelector('input[name="profissional"]:checked');
+        if (!profSelected) {
+          alert('Por favor, selecione um profissional.');
+          return;
+        }
+      } else if (step === 4) {
+        const dateVal = document.getElementById('bookingDate').value;
+        const timeVal = document.getElementById('bookingTime').value;
+        if (!dateVal || !timeVal) {
+          alert('Por favor, preencha a data e o horário desejados.');
+          return;
+        }
+      }
+
+      // Oculta todas as etapas
+      const steps = document.querySelectorAll('.booking-step');
+      steps.forEach(s => s.classList.remove('active'));
+
+      // Remove active de todos os indicadores
+      const indicators = document.querySelectorAll('.step-indicator');
+      indicators.forEach(ind => ind.classList.remove('active'));
+
+      // Mostra a etapa correta e ativa indicador
+      document.getElementById('step-' + step).classList.add('active');
+      document.getElementById('indicator-' + step).classList.add('active');
+      window.scrollTo({ top: 300, behavior: 'smooth' });
+    }
+
+    function prevStep(step) {
+      const steps = document.querySelectorAll('.booking-step');
+      steps.forEach(s => s.classList.remove('active'));
+
+      const indicators = document.querySelectorAll('.step-indicator');
+      indicators.forEach(ind => ind.classList.remove('active'));
+
+      document.getElementById('step-' + step).classList.add('active');
+      document.getElementById('indicator-' + step).classList.add('active');
+      window.scrollTo({ top: 300, behavior: 'smooth' });
+    }
+
+    function confirmBooking(event) {
+      event.preventDefault();
+
+      const nome = document.getElementById('clientName').value;
+      const telefone = document.getElementById('clientPhone').value;
+      const procedimento = document.querySelector('input[name="procedimento"]:checked').value;
+      const profissional = document.querySelector('input[name="profissional"]:checked').value;
+      const data = document.getElementById('bookingDate').value;
+      const horario = document.getElementById('bookingTime').value;
+
+      alert(`Parabéns, ${nome}! Seu agendamento para "${procedimento}" com ${profissional} no dia ${data} (${horario}) foi pré-reservado com sucesso. Entraremos em contato via WhatsApp para confirmação final.`);
+      
+      document.getElementById('bookingForm').reset();
+      nextStep(1);
+    }
+  </script>
+</body>
+</html>
